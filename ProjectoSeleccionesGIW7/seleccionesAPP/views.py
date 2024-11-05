@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from djnango.http import HttpResponse, HttpResponseNotFound
 from .models import Confederacion, Seleccion, Futbolista
 
 # Vistas de lista
