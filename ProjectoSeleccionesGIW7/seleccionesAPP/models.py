@@ -15,9 +15,9 @@ class Seleccion(models.Model):
         return self.nombre                                     
 
 class Futbolista(models.Model):
-    nombre = models.CharField(max_length=100)
-    apellidos = models.CharField(max_length=100)
-    edad = models.IntegerField()
+    nombre = models.CharField(max_length=50)
+    apellido = models.CharField(max_length=100, default='')
+    fecha_nac = models.DateField()
     #El apartado posiciones es codido generado por Chat-GPT
     POSICIONES = [
         ('POR', 'Portero'),
@@ -34,5 +34,5 @@ class Futbolista(models.Model):
     seleccion = models.ForeignKey(Seleccion, on_delete=models.CASCADE, related_name='futbolista')
     
     def __str__(self):
-        return f"{self.nombre} {self.apellidos}"
+        return f"{self.nombre} {self.apellido}"
     
