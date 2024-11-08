@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Detalle de la Confederacion</title>
+</head>
+<body>
+    <h1>Detalle de la Confederacion</h1>
+    <p>Nombre: {{ Confederacion.nombre }}</p>
+    <p>CIF: {{ Confederacion.cif }}</p>
+    <h2>Selecciones</h2>
+    <ul>
+    {% for seleccion in Confederacion.seleccion.all %}
+        <li>
+            <a href="{% url 'detalleSeleccionesConPlantilla' Seleccion.id %}">
+                {{ seleccion.nombre }}
+            </a>
+        </li>
+    {% empty %}
+        <li>No hay selecciones asociadas a esta Confederacion.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

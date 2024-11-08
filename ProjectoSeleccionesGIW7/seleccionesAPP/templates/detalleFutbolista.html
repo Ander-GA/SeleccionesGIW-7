@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<html>
+<head>
+    <title>Detalle del Futbolista</title>
+</head>
+<body>
+    <h1>Detalle del Futbolista</h1>
+    <p>ID: {{ futbolista.id }}</p>
+    <p>Nombre: {{ futbolista.nombre }}</p>
+    <p>Fecha de Nacimiento: {{ trabajador.fecha_nacimiento }}</p>
+    <p>Antigüedad: {{ trabajador.antiguedad }} años</p>
+    <p>Empresa: {{ trabajador.empresa.nombre }}</p>
+</body>
+</html>
+{% endblock %}
