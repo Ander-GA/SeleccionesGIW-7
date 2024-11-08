@@ -3,8 +3,8 @@ from django.http import HttpResponse, HttpResponseNotFound
 from .models import Confederacion, Seleccion, Futbolista
 
 # Vistas de lista
-def index():
-    return HttpResponse('primera vista')
+def index(request):
+    return render(request, 'index.html')
 
 #SELECCIONES 
 def listaSeleccionPlantillas(request):
@@ -26,13 +26,13 @@ def listaFutbolistaConPlantillas(request):
 def detalleFutbolistaConPlantillas(request, id_futbolista):
     futbolista = get_object_or_404(Futbolista, pk=id_futbolista)
     contexto = {'futbolista': futbolista}
-    return render(request, 'detalleProfesor.html', contexto)
+    return render(request, 'detalleFutbolista.html', contexto)
 
 #CONFEDERACION
 def listaConfederacionConPlantillas(request):
     ciudad = Confederacion.objects.order_by('nombre')
     contexto = {'ciudad_list' : ciudad}
-    return render(request, 'listaCiudad.html', contexto)
+    return render(request, 'listaConfederacion.html', contexto)
 
 def detalleConfederacionConPlantillas(request, id_ciudad):
     confederacion = get_object_or_404(Confederacion, pk=id_ciudad)
