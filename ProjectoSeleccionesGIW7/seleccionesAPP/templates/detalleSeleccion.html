@@ -5,13 +5,13 @@
 <body>
     <h1>Detalle de la Seleccion</h1>
     <p>Nombre: {{ Seleccion.nombre }}</p>
-    <p>CIF: {{ Seleccion.cif }}</p>
+    <p>Confederacion: {{ Seleccion.confederacion }}</p>
     <h2>Selecciones</h2>
     <ul>
     {% for seleccion in seleccion.futbolista.all %}
         <li>
-            <a href="{% url 'detalleSeleccionesConPlantilla' jugador.id %}">
-                {{ jugador.nombre }}
+            <a href="{% url 'detalleSeleccionesConPlantilla' futbolista.id %}">
+                {{ futbolista.nombre }}
             </a>
         </li>
     {% empty %}
