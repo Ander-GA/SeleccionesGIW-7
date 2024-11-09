@@ -1,0 +1,12 @@
+{% for Confederacion in listaConfederacion.%}
+
+<h1> {{ confederacion.nombre }}</h1>
+<br>
+
+<a href="{% url 'detalleConfederacion' confederacion.nombre%}">Ver detalle de {{ confederacion.nombre }}</a>
+
+{% empty %}
+
+    <p>No hay confederacion disponibles.</p>
+
+{% endfor %}
