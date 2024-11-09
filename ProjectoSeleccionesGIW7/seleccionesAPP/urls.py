@@ -6,15 +6,15 @@ urlpatterns = [
     path('inicio',views.index,name='index'),
 
     #Listado de confederaciones
-    path('listadoDeConfederaciones', views.listaConfederacionConPlantillas,name='listaC'),
+    path('listaConfederaciones/', views.listaConfederacion,name='listaConfederacion'),
     #Detalle de confederaciones
-    path('detalleDeConfederaciones/<int:id_confederacion', views.detalleConfederacionConPlantillas,name='detalleC'),
+    path('detalleConfederacion/<int:id_confederacion>/', views.detalleConfederacion,name='detalleConfederacion'),
     #Listado de selecciones
-    path('listadoDeSelecciones', views.listaSeleccionPlantillas,name='listaS'),
+    path('listaSelecciones/', views.listaSeleccion,name='listaSeleccion'),
     #Detalle de seleccion
-    path('detalleDeSelecciones/<int:id_seleccion', views.detalleSeleccionPlantillas,name='detalleS'),
+    path('detalleSeleccion/<int:id_seleccion>/', views.detalleSeleccion,name='detalleSeleccion'),
     #Listado de futbolistas
-    path('listadoDeFutbolistas', views.listaFutbolistaConPlantillas,name='listaF'),
+    path('listaFutbolistas/', views.listaFutbolista,name='listaFutbolista'),
     #Detalle de futbolista
-    path('detalleDeFutbolistas/<int:id_futbolista', views.detalleFutbolistaConPlantillas,name='detalleF'),
+    path('detalleFutbolista/<int:id_futbolista>/', views.detalleFutbolista,name='detalleFutbolista'),
 ]

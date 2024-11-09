@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 {% for Confederacion in listaConfederacion.%}
+=======
+{% for confederacion in confederacion_list%}
+>>>>>>> e872bbb38e7b372654031ab99bc508b9048dd600
 
 <h1> {{ confederacion.nombre }}</h1>
 
-<a href="{% url 'detalleConfederacion' confederacion.nombre%}">Ver detalle de {{ confederacion.nombre }}</a>
-
+<a href="{% url 'detalleConfederacion' confederacion.id%}">Ver detalle de {{ confederacion.nombre }}</a>
 {% empty %}
 
-    <p>No hay confederacion disponibles.</p>
+    <p>No hay marcas disponibles.</p>
 
 {% endfor %}
+
+
