@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Detalle de la seleccion</title>
+</head>
+<body>
+    <h1>Detalle de la Seleccion</h1>
+    <p>Nombre: {{ Seleccion.nombre }}</p>
+    <p>CIF: {{ Seleccion.cif }}</p>
+    <h2>Selecciones</h2>
+    <ul>
+    {% for seleccion in seleccion.futbolista.all %}
+        <li>
+            <a href="{% url 'detalleSeleccionesConPlantilla' jugador.id %}">
+                {{ jugador.nombre }}
+            </a>
+        </li>
+    {% empty %}
+        <li>No hay futbolista asociado a esta confederacion</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
