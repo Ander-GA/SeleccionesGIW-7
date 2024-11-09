@@ -4,14 +4,14 @@
 </head>
 <body>
     <h1>Detalle de la Seleccion</h1>
-    <p>Nombre: {{ Seleccion.nombre }}</p>
-    <p>Confederacion: {{ Seleccion.confederacion }}</p>
-    <h2>Selecciones</h2>
+    <p>Nombre: {{ seleccion.nombre }}</p>
+    <p>Confederacion: {{ seleccion.confederacion }}</p>
+    <h2>Jugadores</h2>
     <ul>
     {% for seleccion in seleccion.futbolista.all %}
         <li>
-            <a href="{% url 'detalleSeleccionesConPlantilla' futbolista.id %}">
-                {{ futbolista.nombre }}
+            <a href="{% url 'detalleSeleccion' seleccion.id %}">
+                {{ seleccion.nombre }} {{seleccion.apellido}}
             </a>
         </li>
     {% empty %}

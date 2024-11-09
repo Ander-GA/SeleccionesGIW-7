@@ -1,0 +1,12 @@
+{% for seleccion in seleccion_list%}
+
+<h1> {{ seleccion.nombre }}</h1>
+
+<a href="{% url 'detalleSeleccion' seleccion.id%}">Ver detalle de {{ seleccion.nombre }}</a>
+{% empty %}
+
+    <p>No hay marcas disponibles.</p>
+
+{% endfor %}
+
+

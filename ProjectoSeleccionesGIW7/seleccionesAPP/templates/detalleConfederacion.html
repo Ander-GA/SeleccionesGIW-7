@@ -4,13 +4,13 @@
 </head>
 <body>
     <h1>Detalle de la Confederacion</h1>
-    <p>Nombre: {{ Confederacion.nombre }}</p>
-    <p>continente: {{ Confederacion.continente }}</p>
+    <p>Nombre: {{ confederacion.nombre }}</p>
+    <p>Continente: {{ confederacion.continente }}</p>
     <h2>Selecciones</h2>
     <ul>
-    {% for seleccion in Confederacion.seleccion.all %}
+    {% for seleccion in confederacion.seleccion.all %}
         <li>
-            <a href="{% url 'detalleSeleccionesConPlantilla' Seleccion.id %}">
+            <a href="{% url 'detalleSeleccion' seleccion.id %}">
                 {{ seleccion.nombre }}
             </a>
         </li>
