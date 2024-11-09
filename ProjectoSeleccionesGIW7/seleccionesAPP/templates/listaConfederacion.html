@@ -1,7 +1,6 @@
-{% for Confederacion in listaConfederacion.%}
+{% for Confederacion in confederacion_list.%}
 
 <h1> {{ confederacion.nombre }}</h1>
-<br>
 
 <a href="{% url 'detalleConfederacion' confederacion.nombre%}">Ver detalle de {{ confederacion.nombre }}</a>
 
