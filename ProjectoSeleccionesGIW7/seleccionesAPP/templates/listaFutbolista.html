@@ -1,0 +1,13 @@
+
+{% for futbolista in futbolista_list%}
+
+<h1> {{ futbolista.nombre }}</h1>
+
+<a href="{% url 'detalleFutbolista' futbolista.id%}">Ver detalle de {{ futbolista.nombre }}</a>
+{% empty %}
+
+    <p>No hay futbolista disponibles.</p>
+
+{% endfor %}
+
+
