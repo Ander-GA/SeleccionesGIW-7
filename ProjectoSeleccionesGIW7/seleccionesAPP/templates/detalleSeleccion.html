@@ -8,10 +8,10 @@
     <p>Confederacion: {{ seleccion.confederacion }}</p>
     <h2>Jugadores</h2>
     <ul>
-    {% for seleccion in seleccion.futbolista.all %}
+    {% for futbolista in seleccion.futbolista.all %}
         <li>
-            <a href="{% url 'detalleFutbolista' futbolista.id %}">
-                {{ seleccion.nombre }} {{seleccion.apellido}}
+            <a href="{% url 'detalleFutbolista' futbolista.id%}">
+                {{futbolista.nombre }} {{futbolista.apellido}}
             </a>
         </li>
     {% empty %}

@@ -9,6 +9,7 @@ urlpatterns = [
     path('listaConfederaciones/', views.listaConfederacion,name='listaConfederacion'),
     #Detalle de confederaciones
     path('detalleConfederacion/<int:id_confederacion>/', views.detalleConfederacion,name='detalleConfederacion'),
+
     #Listado de selecciones
     path('listaSelecciones/', views.listaSeleccion,name='listaSeleccion'),
     #Detalle de seleccion
@@ -16,5 +17,5 @@ urlpatterns = [
     #Listado de futbolistas
     path('listaFutbolistas/', views.listaFutbolista,name='listaFutbolista'),
     #Detalle de futbolista
-    path('detalleFutbolista/<int:id_futbolista>/', views.detalleFutbolista,name='detalleFutbolista'),
+    path('detalleFutbolista/<int:id_futbolista>/', views.detalleFutbolista,name='detalleFutbolista')
 ]
