@@ -32,6 +32,7 @@ class Futbolista(models.Model):
     )
 
     seleccion = models.ForeignKey(Seleccion, on_delete=models.CASCADE, related_name='futbolista')
+    imagenFutbolista= models.URLField(max_length=600,null=True,blank=True)
     
     def __str__(self):
         return f"{self.nombre} {self.apellido}"

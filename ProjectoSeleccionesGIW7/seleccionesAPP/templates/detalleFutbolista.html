@@ -10,5 +10,12 @@
     <p>Apellido: {{ futbolista.apellido }}</p>
     <p>Fecha de nacimiento: {{ futbolista.fecha_nac }}</p>
     <p>Posicion: {{ futbolista.posicion }}</p>
+    {% if futbolista.imagenFutbolista %}
+        <p>Imagen:</p>
+        <img class="imagenFutbolista" src="{{futbolista.imagenFutbolista}}" alt="imagen" style="width:300px" >
+    {% else %}
+        <p>No hay imagen disponible para este trabajador.</p>
+    {%endif%}
+
 </body>
 </html>

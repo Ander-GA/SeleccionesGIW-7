@@ -10,7 +10,7 @@
     <ul>
     {% for seleccion in seleccion.futbolista.all %}
         <li>
-            <a href="{% url 'detalleSeleccion' seleccion.id %}">
+            <a href="{% url 'detalleFutbolista' futbolista.id %}">
                 {{ seleccion.nombre }} {{seleccion.apellido}}
             </a>
         </li>
