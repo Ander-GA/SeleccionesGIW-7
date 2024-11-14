@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+{% block contenido %}
+
 {% for seleccion in seleccion_list%}
 
 <h1> {{ seleccion.nombre }}</h1>
@@ -10,3 +13,4 @@
 {% endfor %}
 
 
+{% endblock %}
