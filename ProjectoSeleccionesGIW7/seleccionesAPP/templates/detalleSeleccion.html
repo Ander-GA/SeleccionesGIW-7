@@ -9,17 +9,34 @@
     <p>Nombre: {{ seleccion.nombre }}</p>
     <p>Confederacion: {{ seleccion.confederacion }}</p>
     <h2>Jugadores</h2>
-    <ul>
+    <div id="tabla">
+    <table>
     {% for futbolista in seleccion.futbolista.all %}
-        <li>
+        <tr><td>
+        {% if futbolista.imagenFutbolista %}
+            <img class="imagenFutbolista" src="{{futbolista.imagenFutbolista}}" alt="imagen" style="width:70px" >
+        {% else %}
+            <img class="imagenFutbolista" src="../static/style/FutbolistaSinFoto.png" alt="imagen" style="width:70px">
+        {%endif%}
+
+
+        <img class="imagenFutbolista" src="{{futbolista.imagenFutbolista}}" alt="imagen" style="width:50px" >
+    </td>
+        <td>
             <a href="{% url 'detalleFutbolista' futbolista.id%}">
                 {{futbolista.nombre }} {{futbolista.apellido}}
             </a>
-        </li>
+        </td>
+        <td>
+            {{futbolista.posicion}}
+        </td>
+        
     {% empty %}
-        <li>No hay futbolista asociado a esta confederacion</li>
+        <td>No hay futbolista asociado a esta confederacion</td>
     {% endfor %}
-    </ul>
+        </tr>
+    </table>
+    </div>
 </body>
 </html>
 {% endblock %}

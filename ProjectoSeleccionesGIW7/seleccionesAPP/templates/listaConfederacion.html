@@ -3,8 +3,8 @@
 
 {% for confederacion in confederacion_list%}
 
-
-<h1> {{ confederacion.nombre }}</h1>
+<h1>Listado de las Confederaciones</h1>
+<h2> {{ confederacion.nombre }}</h2>
 
 <a href="{% url 'detalleConfederacion' confederacion.id%}">Ver detalle de {{ confederacion.nombre }}</a>
 {% empty %}
