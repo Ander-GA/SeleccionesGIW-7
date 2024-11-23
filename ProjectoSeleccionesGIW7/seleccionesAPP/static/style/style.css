@@ -44,7 +44,7 @@ h6
 a, a:hover
 { outline: none;
   text-decoration: underline;
-  color: #FD5BFF;}
+  color: #5bff76;}
 
 a:hover
 { text-decoration: none;}
@@ -89,7 +89,7 @@ ol li
   margin-right: auto;}
 
 #header
-{ background: #8B0073;
+{ background: #25d43c;
   height: 240px;}
 
 #logo
@@ -116,7 +116,7 @@ ol li
   text-decoration: none;}
 
 #logo_text h1 a .logo_colour
-{ color: #FD5BFF;}
+{ color: #5bff76;}
 
 #logo_text h2
 { font-size: 100%;
@@ -127,7 +127,7 @@ ol li
 { width: 877px;
   height: 72px;
   padding: 0;
-  background: #5B2660 url(menu.png) repeat-x;} 
+  background: #368a36 url(menu.png) repeat-x;} 
 
 ul#menu, ul#menu li
 { float: left;
@@ -152,7 +152,7 @@ ul#menu li a
 
 ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 { color: #FFF;
-  background: #3F1B41 url(menu_select.png) repeat-x;}
+  background: #368a36 url(menu_select.png) repeat-x;}
 
 #site_content
 { width: 837px;
