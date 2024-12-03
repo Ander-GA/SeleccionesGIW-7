@@ -27,7 +27,7 @@
            <li><a href="{%url 'listaConfederacion'%}">Confederaciones</a></li>
           <li><a href="{%url 'listaSeleccion'%}">Selecciones</a></li>
           <li><a href="{%url 'listaFutbolista'%}">Jugadores</a></li>
-          <li><a href="{%url 'contacto'%}">Contactanos</a></li>
+          <li><a href="#">Contactanos</a></li>
         </ul>
       </div>
     </div>
@@ -38,26 +38,20 @@
         <h4>¿De que va este proyecto?</h4>
         <h5>Proyecto de Ingenieria Web 2024-2025</h5>
         <p> Es un proyecto trabajado con HTML, Python y Django. El proyecto trata sobre las selecciones de futbol que hay alrededor del mundo.
-          Aqui encontraras 5 selecciones por cada confederacion y por cada seleccion 12 jugadores, la mayoria de ellos con foto.
-          <br /><a href="#">Read more</a></p>
+          Aqui encontraras 12 jugadores por cada seleccion, y 5 selecciones por cada confederacion.
+          <br />
         <p></p>
         <h4>¿Quienes somos?</h4>
         <h5>Ingenieria Deusto</h5>
         <p> Somos tres alumnos cursando la asignatura de Ingenieria Web de la Universidad de Deusto. 
-          <br /><a href="#">Read more</a></p>
+          <br />
         <h3>Autores</h3>
         <ul>
           <li>Ander Gonzalez Alonso</li>
           <li>Emilio Gil del Rio Perez</li>
           <li>Beñat Burgoa Santos</li>
         </ul>
-        <h3>Search</h3>
-        <form method="post" action="#" id="search_form">
-          <p>
-            <input class="search" type="text" name="search_field" value="Enter keywords....." />
-            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
-          </p>
-        </form>
+        
       </div>
       <div id="content">
         {% block contenido %}{%endblock%}

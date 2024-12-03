@@ -11,17 +11,21 @@
     <h2>Jugadores</h2>
     <div id="tabla">
     <table>
+        <tr><th>Imagen</th>
+            <th>Nombre</th>
+            <th>Posicion</th></tr>
     {% for futbolista in seleccion.futbolista.all %}
         <tr><td>
         {% if futbolista.imagenFutbolista %}
-            <img class="imagenFutbolista" src="{{futbolista.imagenFutbolista}}" alt="imagen" style="width:70px" >
+            <img class="imagenFutbolista" src="{{futbolista.imagenFutbolista}}" alt="imagen" style="width:70px"  >
         {% else %}
-            <img class="imagenFutbolista" src="../static/style/FutbolistaSinFoto.png" alt="imagen" style="width:70px">
+           <img class="imagenFutbolista" src="../static/style/FutbolistaSinFoto.png" alt="imagen" style="width:70px">
         {%endif%}
 
 
-        <img class="imagenFutbolista" src="{{futbolista.imagenFutbolista}}" alt="imagen" style="width:50px" >
+       
     </td>
+    
         <td>
             <a href="{% url 'detalleFutbolista' futbolista.id%}">
                 {{futbolista.nombre }} {{futbolista.apellido}}
