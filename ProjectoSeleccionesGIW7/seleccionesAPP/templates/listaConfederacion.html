@@ -1,12 +1,16 @@
 {% extends 'base.html' %}
 {% block contenido %}
 
+<h1>Listado de las Confederaciones</h1>
+
 {% for confederacion in confederacion_list%}
 
-<h1>Listado de las Confederaciones</h1>
-<h2> {{ confederacion.nombre }}</h2>
 
-<a href="{% url 'detalleConfederacion' confederacion.id%}">Ver detalle de {{ confederacion.nombre }}</a>
+    <a href="{% url 'detalleConfederacion' confederacion.id%}">
+        <h2> {{ confederacion.nombre }}</h2>
+    </a>
+
+
 {% empty %}
 
     <p>No hay marcas disponibles.</p>
