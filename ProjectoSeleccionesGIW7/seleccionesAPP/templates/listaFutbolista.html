@@ -2,9 +2,11 @@
 {% block contenido %}
 {% for futbolista in futbolista_list%}
 
-<h1> {{ futbolista.nombre }} {{futbolista.apellido}}</h1>
 
-<a href="{% url 'detalleFutbolista' futbolista.id%}">Ver detalle de {{ futbolista.nombre }}</a>
+
+<a href="{% url 'detalleFutbolista' futbolista.id%}"> 
+    <h1> {{ futbolista.nombre }} {{futbolista.apellido}}</h1> 
+</a>
 {% empty %}
 
     <p>No hay futbolista disponibles.</p>
