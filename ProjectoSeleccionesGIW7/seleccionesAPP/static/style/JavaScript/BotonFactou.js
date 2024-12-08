@@ -13,7 +13,7 @@
       const factoboton = document.createElement("button");
       const facto = document.createElement("p");
   
-      factoboton.textContent = "Suelta ese factouuuuu";
+      factoboton.textContent = "Suelta ese Factouuuuuuuuuuuuuu";
       factoboton.style.padding = "10px 20px";
       factoboton.style.backgroundColor = "#0055ff";
       factoboton.style.color = "#fff";

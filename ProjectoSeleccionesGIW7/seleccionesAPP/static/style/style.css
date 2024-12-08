@@ -25,13 +25,13 @@ h1, h2, h3, h4, h5, h6
 
 h2
 { font: normal 175% 'century gothic', arial, sans-serif;
-  color: #1293EE;}
+  color: #0a5184;}
 
 h4, h5, h6
 { margin: 0;
   padding: 0 0 5px 0;
   font: normal 120% arial, sans-serif;
-  color: #1293EE;}
+  color: #0e4165;}
 
 h5, h6
 { font: italic 95% arial, sans-serif;
@@ -44,7 +44,9 @@ h6
 a, a:hover
 { outline: none;
   text-decoration: underline;
-  color: #5bff76;}
+  color: #000000;
+  font-size: 1.2em;
+}
 
 a:hover
 { text-decoration: none;}
@@ -124,10 +126,20 @@ ol li
   color: #DDD;}
 
 #menubar
-{ width: 877px;
+{ 
+  width: 877px;
   height: 72px;
   padding: 0;
-  background: #368a36 url(menu.png) repeat-x;} 
+  background: #00573F; 
+} 
+#menubar:hover ul#menu li a {
+  color: #FFD700; 
+} 
+
+ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover {
+  color: #FFF;
+  background: #000000 url(menu_select.png) repeat-x;
+}
 
 ul#menu, ul#menu li
 { float: left;
@@ -161,52 +173,132 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
   padding: 20px 24px 20px 37px;
   background: #FFF url(content.png) repeat-y;} 
 
-.sidebar
-{ float: right;
-  width: 190px;
-  padding: 0 15px 20px 15px;}
+  .sidebar {
+    float: right;
+    width: 250px; 
+    padding: 20px;
+    background: #3B9A40; 
+    border: 2px solid #FFFFFF;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .sidebar h3, .sidebar h4, .sidebar h5 {
+    color: #FFD700; 
+    font-family: 'Arial Black', sans-serif; 
+    text-transform: uppercase; 
+    letter-spacing: 0.05em; 
+  }
+  
+  .sidebar h3 {
+    font-size: 1.5em; 
+    margin-bottom: 15px;
+  }
+  
+  .sidebar h4 {
+    font-size: 1.3em;
+    margin-top: 20px;
+  }
+  
+  .sidebar h5 {
+    font-size: 1.1em;
+    margin-top: 10px;
+  }
+  
+  .sidebar p {
+    color: #FFF; 
+    font-size: 1em; 
+    line-height: 1.5em;
+    margin: 10px 0;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px 0;
+    font-size: 1.1em; 
+    color: #FFF; 
+    border-bottom: 1px solid #FFD700; 
+  }
+  
+  .sidebar ul li:last-child {
+    border-bottom: none; 
+  }
+  
+  .sidebar ul li a {
+    color: #5bff76; 
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+  
+  .sidebar ul li a:hover {
+    color: #FFD700; 
+    text-decoration: underline;
+  }
+  
+  .sidebar li a.selected {
+    font-weight: bold;
+    color: #FFD700; 
+    text-decoration: underline;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+  }
+  
 
-.sidebar ul
-{ width: 178px; 
-  padding: 4px 0 0 0; 
-  margin: 4px 0 30px 0;}
-
-.sidebar li
-{ list-style: none; 
-  padding: 0 0 7px 0; }
-
-.sidebar li a, .sidebar li a:hover
-{ padding: 0 0 0 40px;
-  display: block;
-  background: transparent url(link.png) no-repeat left center;} 
-
-.sidebar li a.selected
-{ color: #444;
-  text-decoration: none;} 
-
-#content
-{ text-align: left;
-  width: 595px;
-  padding: 0;}
-
-#content ul
-{ margin: 2px 0 22px 0px;}
-
-#content ul li
-{ list-style-type: none;
-  background: url(bullet.png) no-repeat;
-  margin: 0 0 6px 0; 
-  padding: 0 0 4px 25px;
-  line-height: 1.5em;}
+  #content {
+    text-align: left;
+    width: 80%;
+    padding: 20px;
+    background: #F0EFE2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #content ul {
+    margin: 20px 0 30px 0;
+    padding: 0;
+  }
+  
+  #content ul li {
+    list-style-type: none;
+    background: url('balon.png') no-repeat left center;
+    background-size: 20px 20px;
+    margin: 10px 0;
+    padding: 8px 0 8px 30px;
+    line-height: 1.8em;
+    font-size: 1.1em;
+    color: #333;
+    border-left: 4px solid #FFD700;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #content ul li:hover {
+    background-color: #3B9A40;
+    color: #FFD700;
+    border-left: 4px solid #5bff76;
+  }
+  
+  #content ul li a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  #content ul li a:hover {
+    color: #FFD700;
+  }
+  
 
 #footer
-{ width: 878px;
+{   width: 878px;
   font: normal 100% 'lucida sans unicode', arial, sans-serif;
   height: 33px;
   padding: 24px 0 5px 0;
   text-align: center; 
-  background: #29425E url(footer.png) repeat-x;
-  color: #FFF;
+  background: #00573F; 
+  color: #FFD700;
   text-transform: uppercase;
   letter-spacing: 0.1em;}
 
@@ -257,7 +349,7 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
   height: 33px;
   padding: 2px 0 3px 0;
   cursor: pointer; 
-  background: #A10084; 
+  background: #000000; 
   color: #FFF;}
 
 .form_settings textarea, .form_settings select
